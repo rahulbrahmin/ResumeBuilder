@@ -1,0 +1,21 @@
+body{
+    background-color: azure;
+}
+
+#res-temp{
+    display: none;
+}
+
+#resume{
+    margin-right: 30px;
+}
+
+.img {
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    width: 200px;
+  }
+
+.bg{
+    background-color: #b5d8e6;
+}  

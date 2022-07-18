@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Resume Builder</title>
+</head>
+<body>
+
+    <div class="container"  id="resume">
+
+        <h1 class="text-center my-2">Resume Builder</h1>
+
+        <div class="row">
+            <div class="col-md-6" id="coln">
+
+                <div class="form-group">
+                    <input type="text" id="name"
+                    placeholder="Name" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="email"
+                    placeholder="E-mail" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="phone"
+                    placeholder="Phone No." class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="git"
+                    placeholder="Github" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="linkedin"
+                    placeholder="Linkedin" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <textarea placeholder="Skills" class="form-control skill" cols="50" rows="2" id="skill"></textarea>
+                </div>
+
+                <div class="form-group mt-2" id="edu">
+                    
+                    <textarea placeholder="Education" class="form-control edu" cols="50" rows="2"></textarea>
+
+
+
+
+                    <div class="container" id="eduBtn">
+                        <button onclick="addEdu()" class="btn btn-primary btn-sm mt-2">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group mt-2" id="proj">
+                    <textarea placeholder="Projects" class="form-control proj" cols="50" rows="2"></textarea>
+
+                    <div class="container" id="projBtn">
+                        <button onclick="addProj()" class="btn btn-primary btn-sm mt-2">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group mt-2" id="exp">
+                    <textarea placeholder="Work Experiences" class="form-control workExp" cols="50" rows="2"></textarea>
+
+                    <div class="container" id="expBtn">
+                        <button onclick="addExp()" class="btn btn-primary btn-sm mt-2">Add</button>
+                    </div>
+                </div>
+
+                <div class="container text-center">
+                    <button onclick="getResume()" class="btn btn-primary btn-lg">Build Resume</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container" id="res-temp">
+
+        <div class="row">
+
+            <div class="col-md-4 text-center py-5 bg">
+
+                <img
+                    src="https://www.computerhope.com/jargon/g/guest-user.jpg"
+                    alt=""
+                    class="img-fluid img" id="imgTemplate" />
+
+                    <div class="container">
+                        <h3 id="name1">Rudramani Dubey</h3>
+                        <p id="email1">rahuldubeyrudramani@gmail.com</p>
+                        <p id="phone1">6201630029</p>
+            
+                        <hr />
+            
+                        <p>
+                          <a id="git1" href="#1"
+                            >https://github.com/rahulbrahmin</a
+                          >
+                        </p>
+                        <p>
+                          <a id="linkedin1" href="#1">https://rahulbrahmin.github.io/Portfolio/</a>
+                        </p>
+                      </div>    
+
+            </div>
+
+            <div class="col-md-8 py-5">
+                
+                <div class="card">
+                    <div class="card-header bg">
+                      <h3>Skills</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="skills1">skills , skills , skills</p>
+                    </div>
+                  </div>
+
+                <div class="card mt-4">
+                    <div class="card-header bg">
+                      <h3>Education</h3>
+                    </div>
+                    <div class="card-body">
+                      <ul id="eduT">
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                          Odit, ad.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                          Odit, ad.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                          Odit, ad.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="card mt-4">
+                    <div class="card-header bg">
+                      <h3>Projects</h3>
+                    </div>
+                    <div class="card-body">
+                      <ul id="projT">
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                          Odit, ad.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                          Odit, ad.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                          Odit, ad.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="card mt-4">
+                    <div class="card-header bg">
+                      <h3>Work Experiences</h3>
+                    </div>
+                    <div class="card-body">
+                      <ul id="expT">
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                          Odit, ad.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                          Odit, ad.
+                        </li>
+                        <li>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                          Odit, ad.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="container mt-3 text-center">
+                    <button onclick="download()" class="btn bg">Download</button>
+                  </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
